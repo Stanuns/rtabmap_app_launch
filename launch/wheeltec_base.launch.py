@@ -32,11 +32,12 @@ def generate_launch_description():
     wheeltec_launch_dir = os.path.join(wheeltec_bringup_dir, 'launch')
     wheeltec_robot = IncludeLaunchDescription(
             PythonLaunchDescriptionSource(os.path.join(wheeltec_launch_dir, 'turn_on_wheeltec_robot.launch.py')),
-            launch_arguments={'carto_slam': 'true'}.items(),
+            launch_arguments={'carto_slam': 'true',
+                              }.items(),
     )
-    wheeltec_lidar = IncludeLaunchDescription(
-            PythonLaunchDescriptionSource(os.path.join(wheeltec_launch_dir, 'wheeltec_lidar.launch.py')),
-    )
+#     wheeltec_lidar = IncludeLaunchDescription(
+#             PythonLaunchDescriptionSource(os.path.join(wheeltec_launch_dir, 'wheeltec_lidar.launch.py')),
+#     )
 
     camera_bringup_dir = get_package_share_directory('astra_camera')
     camera_launch_dir = os.path.join(camera_bringup_dir, 'launch')
@@ -46,6 +47,6 @@ def generate_launch_description():
 
     return LaunchDescription([
         wheeltec_robot,
-        wheeltec_lidar,
+        # wheeltec_lidar,
         wheeltec_astra_camera,
     ])

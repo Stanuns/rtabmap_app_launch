@@ -16,8 +16,8 @@ ros2 launch astra_camera astra_mini.launch.py
     rgb_topic:=/camera/color/image_raw \
     depth_topic:=/camera/depth/image_raw \
     camera_info_topic:=/camera/color/camera_info \
-    frame_id:=camera_link \
-    use_sim_time:=true \
+    frame_id:=base_footprint \
+    use_sim_time:=false \
     approx_sync:=true \
     qos:=2 \
     rviz:=true \
