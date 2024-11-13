@@ -2,6 +2,8 @@
 
 # 使用Astra pro plus进行rtabmap建图[reference](https://blog.csdn.net/weixin_45007300/article/details/133931877)
 
+## CLI启动方式
+
 - 1. 启动astra pro plus
 
 ```bashrc
@@ -22,4 +24,9 @@ ros2 launch astra_camera astra_mini.launch.py
     qos:=2 \
     rviz:=true \
     queue_size:=30
+```
+
+## launch 文件启动方式
+```bashrc
+ros2 launch rtabmap_app_launch wheeltec_map_rgbd_whole.launch.py
 ```
